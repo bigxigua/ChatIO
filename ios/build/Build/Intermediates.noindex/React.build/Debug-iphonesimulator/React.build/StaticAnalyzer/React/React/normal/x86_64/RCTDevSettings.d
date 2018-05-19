@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Modules/RCTDevSettings.mm \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Modules/RCTDevSettings.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Modules/RCTJSCSamplingProfiler.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/DevSupport/RCTPackagerClient.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/DevSupport/RCTPackagerConnection.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/DevSupport/RCTInspectorDevServerHelper.h \
+  /Users/toutakarachuu/Desktop/workspace/react-native/ChatIO/node_modules/react-native/React/Inspector/RCTInspectorPackagerConnection.h
