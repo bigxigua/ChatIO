@@ -1,0 +1,2 @@
+1. 一个通过Navigation.startSingleScreenApp注册的登陆注册界面
+2. 一个带底部导航的使用Navigation.startTabBasedApp注册的内容界面

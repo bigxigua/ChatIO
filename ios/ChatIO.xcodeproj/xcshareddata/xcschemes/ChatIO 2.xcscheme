@@ -17,7 +17,7 @@
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
                BuildableName = "ChatIO.app"
                BlueprintName = "ChatIO"
-               ReferencedContainer = "container:ChatIO.xcodeproj">
+               ReferencedContainer = "container:Edit Scheme.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,7 +36,7 @@
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "ChatIO.app"
             BlueprintName = "ChatIO"
-            ReferencedContainer = "container:ChatIO.xcodeproj">
+            ReferencedContainer = "container:Edit Scheme.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -60,7 +60,7 @@
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "ChatIO.app"
             BlueprintName = "ChatIO"
-            ReferencedContainer = "container:ChatIO.xcodeproj">
+            ReferencedContainer = "container:Edit Scheme.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,7 +79,7 @@
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
             BuildableName = "ChatIO.app"
             BlueprintName = "ChatIO"
-            ReferencedContainer = "container:ChatIO.xcodeproj">
+            ReferencedContainer = "container:Edit Scheme.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

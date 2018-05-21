@@ -31,7 +31,7 @@
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
                BuildableName = "ChatIO-tvOS.app"
                BlueprintName = "ChatIO-tvOS"
-               ReferencedContainer = "container:ChatIO.xcodeproj">
+               ReferencedContainer = "container:Edit Scheme.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
                BuildableName = "ChatIO-tvOSTests.xctest"
                BlueprintName = "ChatIO-tvOSTests"
-               ReferencedContainer = "container:ChatIO.xcodeproj">
+               ReferencedContainer = "container:Edit Scheme.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -54,6 +54,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
@@ -63,7 +64,7 @@
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
                BuildableName = "ChatIO-tvOSTests.xctest"
                BlueprintName = "ChatIO-tvOSTests"
-               ReferencedContainer = "container:ChatIO.xcodeproj">
+               ReferencedContainer = "container:Edit Scheme.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -73,7 +74,7 @@
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
             BuildableName = "ChatIO-tvOS.app"
             BlueprintName = "ChatIO-tvOS"
-            ReferencedContainer = "container:ChatIO.xcodeproj">
+            ReferencedContainer = "container:Edit Scheme.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,6 +84,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -96,7 +98,7 @@
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
             BuildableName = "ChatIO-tvOS.app"
             BlueprintName = "ChatIO-tvOS"
-            ReferencedContainer = "container:ChatIO.xcodeproj">
+            ReferencedContainer = "container:Edit Scheme.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -115,7 +117,7 @@
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
             BuildableName = "ChatIO-tvOS.app"
             BlueprintName = "ChatIO-tvOS"
-            ReferencedContainer = "container:ChatIO.xcodeproj">
+            ReferencedContainer = "container:Edit Scheme.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
