@@ -7,7 +7,7 @@ import {
   Image,
   ImageBackground,
   TouchableOpacity,
-  ScrollView
+  FlatList
 } from 'react-native';
 import layout from '../utils/layout';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -17,15 +17,22 @@ class UserInfoScreen extends React.Component {
   constructor(props){
     super(props);
     this.goBack = this.goBack.bind(this);
+    this.createFlatRenderItem = this.createFlatRenderItem.bind(this);
   }
   goBack(){
-    console.log(this.props.navigator)
+    console.log(this.props.navigator);
     this.props.navigator.pop({
       animated: true,
       // animationType: 'slide-horizontal'
     });
   }
+  createFlatRenderItem(item){
+    return (
+      <Text>{item.key}</Text>
+    )
+  }
   render(){
+    const messageLists = [{key: 'a'}, {key: 'b'}];
     return (
       <View style={styles.container}>
           <View style={styles.header}>
@@ -36,6 +43,12 @@ class UserInfoScreen extends React.Component {
               <Icon name='user' style={styles.userIcon} />
               <Icon name='phone' style={[styles.userIcon,styles.phoneIcon]} />
           </View>
+          <ImageBackground style={styles.chatBox} source={require('../assets/images/bg.jpeg')}>
+            <FlatList
+              data={messageLists}
+              renderItem={({item}) => this.createFlatRenderItem(item)}
+              style={styles.lists} />
+          </ImageBackground>
       </View>
     )
   }
@@ -53,12 +66,11 @@ const styles = StyleSheet.create({
     height: 64,
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#eee'
-
+    backgroundColor: '#f3d2b1'
   },
   backIcon: {
-    fontSize: 40,
-    marginTop:8,
+    fontSize: 36,
+    marginTop:9,
     marginLeft: 10,
     color: '#4b4b4b'
   },
@@ -82,6 +94,14 @@ const styles = StyleSheet.create({
   phoneIcon: {
     right: 44,
     top: 26
+  },
+  chatBox: {
+    width: screenWidth,
+    height:screenHeight - 64
+  },
+  lists: {
+    flex: 1,
+    // backgroundColor: 'red'
   }
 });
 
