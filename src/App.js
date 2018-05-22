@@ -11,6 +11,10 @@ import './utils/global'
 import registerScreens from './screens/index.js';
 
 import store from './store/configureStore'
+
+import {
+  Platform
+} from 'react-native'
 import * as appActions from './actions/index';
 
 registerScreens(store, Provider);
@@ -47,11 +51,39 @@ export default class App extends Component {
         return;
       case 'after-login':
         Navigation.startTabBasedApp({
+          animationType: Platform.OS === 'ios' ? 'slide-down' : 'fade',
           tabs: [
             {
               label: '消息',
+              screen: 'ChatIO.ChatScreen', // this is a registered name for a screen
+              icon: require('./assets/icons/2.png'),
+              navigatorStyle: {
+                navBarHidden: true
+              }
+            },
+            {
+              label: '联系人',
+              screen: 'ChatIO.UserInfoScreen', // this is a registered name for a screen
+              icon: require('./assets/icons/home_gaitubao_com_25x22.png'),
+              iconInsets: {
+                left: -4
+              },
+              navigatorStyle: {
+                navBarHidden: true
+              }
+            },
+            {
+              label: '看点',
               screen: 'ChatIO.MessageListsScreen', // this is a registered name for a screen
-              icon: require('./assets/images/key.png'),
+              icon: require('./assets/icons/321.png'),
+              navigatorStyle: {
+                navBarHidden: true
+              }
+            },
+            {
+              label: '动态',
+              screen: 'ChatIO.MessageListsScreen', // this is a registered name for a screen
+              icon: require('./assets/icons/2.png'),
               navigatorStyle: {
                 navBarHidden: true
               }

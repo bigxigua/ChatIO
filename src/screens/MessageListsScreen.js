@@ -39,7 +39,7 @@ class MessageListsScreen extends React.Component {
     this.pushNavigator = this.pushNavigator.bind(this);
     this.state = {
       searchContent: '搜索或开始新的对话',
-      showMenu: false,
+      showMenu: true,
       hiddenButtons: [
         {
           backgroundColor: 'red',
@@ -83,11 +83,14 @@ class MessageListsScreen extends React.Component {
   pushNavigator(){
     this.props.navigator.push({
       screen: 'ChatIO.UserInfoScreen',
-      animationType: 'slide-horizontal',
       duration: '200',
+      animationType: 'slide-horizontal',
       navigatorStyle: {
         tabBarHidden: true,
         navBarHidden: true
+      },
+      appStyle: {
+        // orientation: 'landscape'
       }
     });
   }
@@ -98,7 +101,6 @@ class MessageListsScreen extends React.Component {
       <TouchableWithoutFeedback onPress={this.toggleShowMenu} style={{ zIndex: 100 }}>
         <Animated.View style={[styles.bgCover, {opacity: this.state.coverOpacity}]} />
       </TouchableWithoutFeedback>) : null;
-
     return (
       <View style={styles.container}>
         {/*头部*/}
@@ -134,6 +136,10 @@ class MessageListsScreen extends React.Component {
           </View>
           <View style={styles.menuItem}>
             <Icon name='map-signs' style={styles.iconMenu} />
+            <Text style={styles.menuText}>切换账号</Text>
+          </View>
+          <View style={styles.menuItem}>
+            <Icon name='users' style={styles.iconMenu} />
             <Text style={styles.menuText}>切换账号</Text>
           </View>
         </Animated.View>
