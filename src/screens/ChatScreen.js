@@ -5,6 +5,7 @@ import {
   Text,
   View,
   Image,
+  TextInput,
   ImageBackground,
   TouchableOpacity,
   FlatList
@@ -49,6 +50,12 @@ class UserInfoScreen extends React.Component {
               renderItem={({item}) => this.createFlatRenderItem(item)}
               style={styles.lists} />
           </ImageBackground>
+          <View style={styles.sendBox}>
+            <TextInput style={styles.sendInput} />
+            <View style={styles.sendIcons}>
+              <Icon name='microphone' style={[styles.sendIcon]} />
+            </View>
+          </View>
       </View>
     )
   }
@@ -97,11 +104,33 @@ const styles = StyleSheet.create({
   },
   chatBox: {
     width: screenWidth,
-    height:screenHeight - 64
+    height:screenHeight - 64- 75,
   },
   lists: {
-    flex: 1,
-    // backgroundColor: 'red'
+    flex: 1
+  },
+  sendBox: {
+    height: 75,
+    backgroundColor:'#f3d2b1',
+    alignItems:'center'
+  },
+  sendInput: {
+    width: screenWidth*0.96,
+    height: 30,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    marginTop: 5
+  },
+  sendIcons: {
+    width: screenWidth,
+    height: 40,
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  sendIcon: {
+    fontSize: 20,
+    color: '#ff9400',
+    marginLeft: 10
   }
 });
 
