@@ -2,22 +2,22 @@ import React from 'react';
 import {connect} from 'react-redux';
 import layout from '../utils/layout';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import SwipeView from 'react-native-swipeout'
-// import {
-//   test
-// } from '../actions/index'
+import ChatItem from '../components/ChatItem';
+import { TOKEN_TEST } from '../config/config'
+
+import {
+  getRoomLists
+} from '../actions/index'
 
 function mapStateToProps(state) {
   return {
-    // test: state.testReducer.test
+    roomLists: state.roomListReducer.roomLists
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    // changeTest: params => {
-    //   dispatch(test(params))
-    // }
+    getRoomLists: (token) => {dispatch(getRoomLists(token))}
   }
 }
 
@@ -37,26 +37,19 @@ class MessageListsScreen extends React.Component {
     super(props);
     this.toggleShowMenu = this.toggleShowMenu.bind(this);
     this.pushNavigator = this.pushNavigator.bind(this);
+    this.gotoRoom = this.gotoRoom.bind(this);
     this.state = {
       searchContent: '搜索或开始新的对话',
       showMenu: true,
-      hiddenButtons: [
-        {
-          backgroundColor: 'red',
-          color: 'white',
-          text: '删除',
-          onPress: () => {}
-        },
-        {
-          backgroundColor: '#C8C7CD',
-          color: 'white',
-          text: '标为未读',
-          onPress: () => {}
-        }
-      ],
       menuScale: new Animated.Value(0),
       coverOpacity: new Animated.Value(0),
     };
+  }
+  componentWillMount () {
+    this.getRoomLists();
+  }
+  getRoomLists () {
+    this.props.getRoomLists(TOKEN_TEST)
   }
   _startMenuAnimated_(showMenu) {
     Animated.sequence([
@@ -78,6 +71,20 @@ class MessageListsScreen extends React.Component {
       showMenu: !showMenu
     }, () => {
       this._startMenuAnimated_(showMenu);
+    });
+  }
+  gotoRoom() {
+    this.props.navigator.push({
+      screen: 'ChatIO.ChatScreen',
+      duration: '200',
+      animationType: 'slide-horizontal',
+      navigatorStyle: {
+        tabBarHidden: true,
+        navBarHidden: true
+      },
+      appStyle: {
+        // orientation: 'landscape'
+      }
     });
   }
   pushNavigator(){
@@ -154,18 +161,7 @@ class MessageListsScreen extends React.Component {
             </View>
         </View>
         {/*消息列表*/}
-        <View style={styles.chatLists}>
-            <View style={styles.chatItem}>
-                <SwipeView right={this.state.hiddenButtons}>
-                    <View style={styles.itemContainer}>
-                        <Image style={styles.groupAvatar} source={TBZ.DEFAULT_GROUP_AVATAR} />
-                        <Text style={styles.groupName}>装逼讨论组</Text>
-                        <Text style={styles.groupLatestMsg}>TBZ: #(哈哈哈)</Text>
-                        <Text style={styles.timeStamp}>下午 14:22</Text>
-                    </View>
-                </SwipeView>
-            </View>
-        </View>
+        <ChatItem />
       </View>
     )
   }
@@ -304,53 +300,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginTop:2,
     paddingLeft: 10,
-  },
-  chatLists: {
-    width: screenWidth,
-    height: 100
-  },
-  chatItem: {
-    width: screenWidth,
-    height: 66,
-    backgroundColor: '#E9EBEB',
-    borderBottomColor: '#e6e6e6',
-    borderBottomWidth: 1,
-  },
-  itemContainer: {
-    width: screenWidth,
-    height: 66,
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  groupAvatar: {
-    width: 48,
-    height: 48,
-    marginLeft: 14,
-    borderRadius:24
-  },
-  groupName: {
-    color: 'rgba(0, 0, 0, 0.870588)',
-    fontSize: 14,
-    fontWeight: 'bold',
-    position: 'absolute',
-    left: 84,
-    top: 15
-  },
-  groupLatestMsg: {
-    color: '#888',
-    fontSize: 12,
-    fontWeight: 'bold',
-    position: 'absolute',
-    left: 84,
-    top: 38,
-  },
-  timeStamp: {
-    position: 'absolute',
-    right: 10,
-    top: 15,
-    fontWeight: 'bold',
-    color: '#999',
-    fontSize: 10
   }
 
 });

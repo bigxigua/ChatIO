@@ -55,11 +55,11 @@ export default class App extends Component {
           tabs: [
             {
               label: '消息',
-              screen: 'ChatIO.ChatScreen', // this is a registered name for a screen
+              screen: 'ChatIO.MessageListsScreen', // this is a registered name for a screen
               icon: require('./assets/icons/2.png'),
               navigatorStyle: {
                 navBarHidden: true,
-                tabBarHidden: true
+                // tabBarHidden: true
               }
             },
             {

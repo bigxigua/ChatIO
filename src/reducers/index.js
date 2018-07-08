@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 
 import root from './rootReducer';
+import roomListReducer from './roomListReducer';
 
 const rootReducer = combineReducers({
-  root
+  root,
+  roomListReducer
 });
 
-export default rootReducer
+export default rootReducer;
 

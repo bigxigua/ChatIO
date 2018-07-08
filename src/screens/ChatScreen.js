@@ -8,6 +8,7 @@ import {
   TextInput,
   ImageBackground,
   TouchableOpacity,
+  KeyboardAvoidingView,
   FlatList
 } from 'react-native';
 import layout from '../utils/layout';
@@ -21,10 +22,9 @@ class UserInfoScreen extends React.Component {
     this.createFlatRenderItem = this.createFlatRenderItem.bind(this);
   }
   goBack(){
-    console.log(this.props.navigator);
     this.props.navigator.pop({
       animated: true,
-      // animationType: 'slide-horizontal'
+      animationType: 'slide-horizontal'
     });
   }
   createFlatRenderItem(item){
@@ -37,7 +37,7 @@ class UserInfoScreen extends React.Component {
     return (
       <View style={styles.container}>
           <View style={styles.header}>
-              <TouchableOpacity onPress={this.goBack}>
+              <TouchableOpacity onPress={this.goBack} style={{zIndex:100}}>
                 <Icon name='angle-double-left' style={styles.backIcon} />
               </TouchableOpacity>
               <Text style={styles.title}>陶宝中</Text>
@@ -51,9 +51,18 @@ class UserInfoScreen extends React.Component {
               style={styles.lists} />
           </ImageBackground>
           <View style={styles.sendBox}>
-            <TextInput style={styles.sendInput} />
+            <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
+              <TextInput style={styles.sendInput} />
+            </KeyboardAvoidingView>
             <View style={styles.sendIcons}>
               <Icon name='microphone' style={[styles.sendIcon]} />
+              <Icon name='image' style={[styles.sendIcon]} />
+              <Icon name='camera-retro' style={[styles.sendIcon]} />
+              <Icon name='smile-o' style={[styles.sendIcon]} />
+              <Icon name='plus-square' style={[styles.sendIcon]} />
+              <Icon name='envelope' style={[styles.sendIcon]} />
+              <Icon name='music' style={[styles.sendIcon]} />
+              <Icon name='rmb' style={[styles.sendIcon]} />
             </View>
           </View>
       </View>
@@ -122,15 +131,15 @@ const styles = StyleSheet.create({
     marginTop: 5
   },
   sendIcons: {
-    width: screenWidth,
+    width: screenWidth*0.96,
     height: 40,
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'space-around'
   },
   sendIcon: {
     fontSize: 20,
-    color: '#ff9400',
-    marginLeft: 10
+    color: '#ff9400'
   }
 });
 
