@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>ZYTGS7J5HY.org.reactjs.native.example.ChatIO</string>
+	<string>FAKETEAMID.org.reactjs.native.example.ChatIO</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>ZYTGS7J5HY.org.reactjs.native.example.ChatIO</string>
+		<string>FAKETEAMID.org.reactjs.native.example.ChatIO</string>
 	</array>
 </dict>
 </plist>

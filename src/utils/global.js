@@ -2,6 +2,7 @@
   global.TBZ = {
     DEFAULT_AVATAR: require('../assets/images/avatar.jpg'),
     DEFAULT_GROUP_AVATAR: require('../assets/images/group_avatar.jpg'),
+    LOGIN_BG: require('../assets/images/loginbg.jpeg'),
     expressionsIMG: require('../assets/images/expressions.png'),
     expressions: ['呵呵', '哈哈', '吐舌', '啊', '酷', '怒', '开心', '汗', '泪', '黑线',
       '鄙视', '不高兴', '真棒', '钱', '疑问', '阴险', '吐', '咦', '委屈', '花心',

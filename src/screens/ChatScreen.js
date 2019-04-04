@@ -133,9 +133,7 @@ const styles = StyleSheet.create({
   sendIcons: {
     width: screenWidth*0.96,
     height: 40,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-around'
+    backgroundColor: 'red'
   },
   sendIcon: {
     fontSize: 20,
